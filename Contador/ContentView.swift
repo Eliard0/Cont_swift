@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var numero: Int = 0
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Stepper("Contador \(numero)", value: $numero, in: 0...10)
         }
         .padding()
     }
